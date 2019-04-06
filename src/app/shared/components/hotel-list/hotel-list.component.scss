@@ -1,0 +1,70 @@
+cdk-virtual-scroll-viewport {
+  height: 100vh;
+  overflow-x: hidden; 
+
+  li {
+    height: 100px;
+  }
+
+
+  &::-webkit-scrollbar {
+    width: 0.5em;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(27, 113, 182);
+  }
+}
+
+.cardHotels {
+  max-width: 100%;
+
+  .mat-card-image{
+    box-shadow: 0px 0px 8px 0px black;
+    position: relative;
+    float: left;
+    width:  150px;
+    height: 150px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+  }
+}
+
+
+.tbl-op {
+  ul {
+    margin-left: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  li {
+    cursor: pointer;
+    display: inline-block;
+    height: 10px;
+    .fa-li {
+      position: static;
+    }
+  }
+}
+
+.svg{
+  width: 20px;
+
+  filter:invert(.5)sepia(1)saturate(5);
+}
+
+.svgam{
+  width: 20px;
+  margin: 5px;
+}
+
+mat-card-title{
+  color: #077ab2;
+  font-size: medium;
+  font-weight: bold;
+}

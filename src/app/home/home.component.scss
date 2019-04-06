@@ -1,0 +1,28 @@
+.container-fluid {
+  padding: 1em;
+}
+
+.logo {
+  width: 150px;
+  margin: 0 auto;
+}
+
+q {
+  font-style: italic;
+  quotes: "« " " »";
+}
+
+.svg{
+  width: 20px;
+  filter:invert(.3) sepia(1) hue-rotate(170deg) saturate(6);
+}
+
+
+mat-panel-title {
+  color: #077ab2;
+  font-weight: bold;
+
+}
+.mat-expansion-panel-header-description, .mat-expansion-indicator::after {
+    color: rgb(7, 122, 178);
+}
