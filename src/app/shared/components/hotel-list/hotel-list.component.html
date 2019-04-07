@@ -1,29 +1,35 @@
-<ng-container *ngIf="infinite | async as hotels">	
-<cdk-virtual-scroll-viewport itemSize="100"  (scrolledIndexChange)="nextBatch($event,([hotels.length -1]))" >
-
-
-<mat-card [hidden]="isLoading" *cdkVirtualFor="let p of hotels; let i = index; trackBy: trackByIdx" class="animated fadeInUp cardHotels" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2.0%" fxLayoutAlign="flex-start">
-	<img mat-card-image src="assets/images/hotels/{{p.image}}" > 
-	<mat-card-content>
-	<mat-card-title> {{p.name}}</mat-card-title>
-<div class="tbl-op" role="toolbar">
-<strong>price: </strong>  {{p.price}}	
-<ul class="fa-ul">
-<li *ngFor="let star of arrayOne(p.stars); let x = index;" class="fa-li">
-	<img class="svg" src="../assets/icons/filters/star.svg" />
-</li>
-</ul>
-<ul class="fa-ul">
-	<li *ngFor="let am of p.amenities" class="fa-li">
-		<img class="svgam" src="../assets/icons/amenities/{{am}}.svg" />
-	</li>	
-</ul>		
- 
-</div>
-	</mat-card-content>
-
-</mat-card>
 <app-loader [isLoading]="isLoading" size="1.5"></app-loader>
-</cdk-virtual-scroll-viewport>
 
-</ng-container>
+<div *ngIf="hotels == null">
+  <ng-container *ngIf="(infinite | async) as hotels">
+    <cdk-virtual-scroll-viewport itemSize="100" (scrolledIndexChange)="nextBatch($event, [hotels.length - 1])">
+      <mat-card
+        *cdkVirtualFor="let p of hotels; let i = index; trackBy: trackByIdx"
+        class="animated fadeInUp cardHotels"
+        fxLayout="row"
+        fxLayout.xs="column"
+        fxLayoutWrap
+        fxLayoutGap="2.0%"
+        fxLayoutAlign="flex-start"
+      >
+        <img mat-card-image src="assets/images/hotels/{{ p.image }}" />
+        <mat-card-content>
+          <mat-card-title> {{ p.name }}</mat-card-title>
+          <div class="tbl-op" role="toolbar">
+            <strong>price: </strong> {{ p.price }}
+            <ul class="fa-ul">
+              <li *ngFor="let star of arrayOne(p.stars); let x = index" class="fa-li">
+                <img class="svg" src="../assets/icons/filters/star.svg" />
+              </li>
+            </ul>
+            <ul class="fa-ul">
+              <li *ngFor="let am of p.amenities" class="fa-li">
+                <img class="svgam" src="../assets/icons/amenities/{{ am }}.svg" />
+              </li>
+            </ul>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </cdk-virtual-scroll-viewport>
+  </ng-container>
+</div>

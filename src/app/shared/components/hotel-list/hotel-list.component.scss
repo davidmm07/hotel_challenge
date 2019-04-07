@@ -1,11 +1,14 @@
+//colors
+$white: #ffffff;
+$color_deep_cerulean_approx: #077ab2;
+
 cdk-virtual-scroll-viewport {
   height: 100vh;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 
   li {
     height: 100px;
   }
-
 
   &::-webkit-scrollbar {
     width: 0.5em;
@@ -23,18 +26,17 @@ cdk-virtual-scroll-viewport {
 .cardHotels {
   max-width: 100%;
 
-  .mat-card-image{
+  .mat-card-image {
     box-shadow: 0px 0px 8px 0px black;
     position: relative;
     float: left;
-    width:  150px;
+    width: 150px;
     height: 150px;
     background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     cover;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
-
 
 .tbl-op {
   ul {
@@ -52,19 +54,29 @@ cdk-virtual-scroll-viewport {
   }
 }
 
-.svg{
+.svg {
   width: 20px;
 
-  filter:invert(.5)sepia(1)saturate(5);
+  filter: invert(0.5) sepia(1) saturate(5);
 }
 
-.svgam{
+.svgam {
   width: 20px;
   margin: 5px;
 }
 
-mat-card-title{
-  color: #077ab2;
+mat-card-title {
+  color: $color_deep_cerulean_approx;
   font-size: medium;
   font-weight: bold;
+}
+
+::ng-deep .open-alert {
+  color: $white !important;
+  background-color: $color_deep_cerulean_approx !important;
+
+  .mat-button {
+    color: $white;
+    background-color: #ff8300;
+  }
 }

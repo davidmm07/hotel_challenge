@@ -3,7 +3,7 @@
 let Hotels = require('../models/hotels');
 
 function getHotels(req, res) {
-  let hotelName = req.params.name;
+  let hotelName = req.query.name;
   let query = req.query;
   let find = Hotels;
   if (!hotelName) {
@@ -18,7 +18,7 @@ function getHotels(req, res) {
 
     delete query.skip;
     delete query.limit;
-
+    delete query.name;
     find = find
       .find(query)
       .skip(skip)

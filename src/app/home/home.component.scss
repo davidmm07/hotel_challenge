@@ -1,5 +1,6 @@
+@import "../shared/components/hotel-list/hotel-list.component";
 .container-fluid {
-  padding: 1em;
+  padding: 0.5em;
 }
 
 .logo {
@@ -12,17 +13,18 @@ q {
   quotes: "« " " »";
 }
 
-.svg{
+.svg {
   width: 20px;
-  filter:invert(.3) sepia(1) hue-rotate(170deg) saturate(6);
+  filter: invert(0.3) sepia(1) hue-rotate(170deg) saturate(6);
 }
-
 
 mat-panel-title {
   color: #077ab2;
   font-weight: bold;
-
 }
-.mat-expansion-panel-header-description, .mat-expansion-indicator::after {
-    color: rgb(7, 122, 178);
+
+.svgiterate {
+  width: 20px;
+
+  filter: invert(0.5) sepia(1) saturate(5);
 }
