@@ -12,8 +12,10 @@
         fxLayoutGap="2.0%"
         fxLayoutAlign="flex-start"
       >
-        <img mat-card-image src="assets/images/hotels/{{ p.image }}" fxFlex="35%" />
-        <mat-card-content fxFlex="40%">
+        <mat-card-content fxLayout.xs="column" fxFlex="35%">
+          <img mat-card-image src="assets/images/hotels/{{ p.image }}" />
+        </mat-card-content>
+        <mat-card-content fxFlex="45%">
           <mat-card-title> {{ p.name }}</mat-card-title>
           <div class="tbl-op" role="toolbar">
             <ul class="fa-ul">
@@ -28,7 +30,7 @@
             </ul>
           </div>
         </mat-card-content>
-        <mat-card-content class="content-price" fxFlex="25%">
+        <mat-card-content fxLayout="column" class="content-price" fxFlex="20%">
           <mat-card-title> Precio por noche por habitación </mat-card-title>
           <h3 class="label-price">ARS: {{ p.price }}</h3>
           <button mat-raised-button>Ver hotel</button>

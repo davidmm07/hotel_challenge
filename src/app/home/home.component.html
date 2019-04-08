@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <mat-card fxLayout="row" fxLayout.xs="column" fxLayoutGap="15px" fxFlexFill>
-    <div fxFlex="30" fxFlex.xs="55">
+    <div fxFlex="25" fxFlex.xs="55">
       <mat-accordion>
         <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
           <mat-expansion-panel-header>
@@ -59,6 +59,6 @@
         </mat-expansion-panel>
       </mat-accordion>
     </div>
-    <app-hotel-list [qs]="query" fxFlex="70" fxFlex.xs="15"></app-hotel-list>
+    <app-hotel-list [qs]="query" fxFlex="75" fxFlex.xs="15"></app-hotel-list>
   </mat-card>
 </div>
