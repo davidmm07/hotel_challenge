@@ -25,8 +25,6 @@ npm install
 npm start
 ```
 
-3. Luego de i
-
 3.Abrir en el navegador con la dirección `localhost:4200`
 
 # Instrucciones API REST (Nodejs):
