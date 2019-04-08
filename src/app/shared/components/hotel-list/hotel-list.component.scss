@@ -1,6 +1,7 @@
 //colors
 $white: #ffffff;
 $color_deep_cerulean_approx: #077ab2;
+$color_flush_orange_approx: #ff8300;
 
 cdk-virtual-scroll-viewport {
   height: 100vh;
@@ -11,7 +12,7 @@ cdk-virtual-scroll-viewport {
   }
 
   &::-webkit-scrollbar {
-    width: 0.5em;
+    width: 0.3em;
   }
 
   &::-webkit-scrollbar-track {
@@ -30,8 +31,8 @@ cdk-virtual-scroll-viewport {
     box-shadow: 0px 0px 8px 0px black;
     position: relative;
     float: left;
-    width: 150px;
-    height: 150px;
+    max-width: 100%;
+    max-height: 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -77,6 +78,22 @@ mat-card-title {
 
   .mat-button {
     color: $white;
-    background-color: #ff8300;
+    background-color: $color_flush_orange_approx;
+  }
+}
+
+.label-price {
+  color: $color_flush_orange_approx;
+}
+
+.content-price {
+  mat-card-title {
+    color: #595858;
+    font-size: small;
+  }
+  .mat-raised-button {
+    color: $white;
+    background-color: #1b71b6;
+    font-weight: bold;
   }
 }

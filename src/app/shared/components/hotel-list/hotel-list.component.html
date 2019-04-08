@@ -12,11 +12,10 @@
         fxLayoutGap="2.0%"
         fxLayoutAlign="flex-start"
       >
-        <img mat-card-image src="assets/images/hotels/{{ p.image }}" />
-        <mat-card-content>
+        <img mat-card-image src="assets/images/hotels/{{ p.image }}" fxFlex="35%" />
+        <mat-card-content fxFlex="40%">
           <mat-card-title> {{ p.name }}</mat-card-title>
           <div class="tbl-op" role="toolbar">
-            <strong>price: </strong> {{ p.price }}
             <ul class="fa-ul">
               <li *ngFor="let star of arrayOne(p.stars); let x = index" class="fa-li">
                 <img class="svg" src="../assets/icons/filters/star.svg" />
@@ -28,6 +27,11 @@
               </li>
             </ul>
           </div>
+        </mat-card-content>
+        <mat-card-content class="content-price" fxFlex="25%">
+          <mat-card-title> Precio por noche por habitación </mat-card-title>
+          <h3 class="label-price">ARS: {{ p.price }}</h3>
+          <button mat-raised-button>Ver hotel</button>
         </mat-card-content>
       </mat-card>
     </cdk-virtual-scroll-viewport>

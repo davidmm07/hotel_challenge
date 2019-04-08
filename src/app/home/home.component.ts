@@ -56,6 +56,7 @@ export class HomeComponent implements OnInit {
     this.step--;
   }
   onFilter() {
+    this.step = -1;
     if (this.queryaux.filter !== '') {
       this.query.filter = '&stars=' + this.queryaux.filter;
     }
